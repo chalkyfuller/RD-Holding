@@ -1,9 +1,7 @@
-var app = angular.module('RustyDaisy', ['ngRoute', 'ngMaterial']);
-app.config(function($routeProvider){
-	$routeProvider.when("/",{
-		templateUrl: "index.html"
-	})
-		.when("/home", {
-			templateUrl: "templates/home.tmpl.html"
+angular.module('RustyDaisy', ['ngRoute', 'ngMaterial'])
+.config(function($routeProvider){
+	$routeProvider
+		.when('/', {
+			templateUrl: 'templates/home.tmpl.html'
 		});
 });
