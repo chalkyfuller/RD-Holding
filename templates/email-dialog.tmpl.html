@@ -1,0 +1,23 @@
+<md-dialog flex="60">
+	<md-toolbar>
+		<div class="md-toolbar-tools">
+			<h2>Add Email</h2>
+			<span flex></span>
+			<md-button class="md-icon-button" ng-click="$ctrl.cancel()">
+				<md-icon md-font-icon="fa-times" class="fa" aria-label="Close dialog"></md-icon>
+			</md-button>
+		</div>
+	</md-toolbar>
+	<md-dialog-content class="md-dialog-content">
+		<form name="EmailForm">
+			<div layout="column">
+				<label>Email:</label>
+				<input ng-model="$ctrl.model.Email" name="dialogEmail" required maxlength="150" ng-pattern="$ctrl.emailPattern" md-autofocus="true" />
+			</div>
+		</form>
+	</md-dialog-content>
+	<md-dialog-actions>
+		<md-button class="md-raised md-accent" ng-click="$ctrl.cancel()">Cancel</md-button>
+		<md-button class="md-raised md-primary" ng-click="$ctrl.hide()" ng-disabled="EmailForm.$invalid">Save</md-button>
+	</md-dialog-actions>
+</md-dialog>
